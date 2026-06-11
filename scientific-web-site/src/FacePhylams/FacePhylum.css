@@ -1,0 +1,391 @@
+/* FacePhylum.css */
+.FacePhylums {
+    padding: 75px;
+    background: var(--main-background-color);
+    min-height: 100vh;
+    color: var(--main-font-color);
+}
+
+.FacePhylums .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.FacePhylums .title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.FacePhylums ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.FacePhylums li {
+    background: linear-gradient(135deg, #3a3d6c, #1f2238);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    position: relative;
+}
+
+/* تأثيرات لامعة احترافية */
+.FacePhylums li::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.FacePhylums li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, #4e5190, #2a2e4c);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2),
+        0 0 40px rgba(38, 49, 255, 0.5);
+}
+
+.phylum-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.phylum-link h2 {
+    font-size: 1.5rem;
+    padding: 20px 20px 10px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.phylum-link img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.phylum-link:hover img {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.2);
+}
+
+.phylum-link p {
+    padding: 10px 20px 10px;
+    font-size: 0.95rem;
+    color: #ddd;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.search-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-section {
+  margin-top: 40px;
+}
+
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ddd;
+  user-select: none;
+  position: relative;
+}
+
+.toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 24px;
+  margin-right: 12px;
+  transition: background-color 0.3s;
+}
+
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-slider {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.search-input {
+    padding: 12px 15px;
+    border: 2px solid #4e54c8;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input::placeholder {
+    color: #ccc;
+}
+
+.search-input:focus {
+    border-color: #8f94fb;
+    box-shadow: 0 0 10px rgba(143, 148, 251, 0.5);
+}
+
+.add-btn, .edit-btn, .delete-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-btn {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.add-btn:hover {
+    background: linear-gradient(90deg, #3a3fc8, #6a7ffb);
+    transform: translateY(-2px);
+}
+
+.edit-btn {
+    background: linear-gradient(90deg, #ffa500, #ff8c00);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(90deg, #e69500, #e67e00);
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: linear-gradient(90deg, #dc143c, #ff4500);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(90deg, #b8112a, #e63900);
+    transform: translateY(-2px);
+}
+
+.phylum-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.phylum-link {
+    flex: 1;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px 20px;
+}
+
+.fav-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.fav-btn:hover {
+    transform: scale(1.2);
+}
+
+.fav-btn.favorited {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-content input, .modal-content textarea {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #f9f9f9;
+}
+
+.modal-content input:focus, .modal-content textarea:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 8px rgba(78, 84, 200, 0.3);
+    outline: none;
+}
+
+.modal-content button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.modal-content button[type="submit"] {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    color: white;
+}
+
+.modal-content button[type="submit"]:hover {
+    background: linear-gradient(90deg, #3a3fc8, #6a7ffb);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .FacePhylums {
+        padding: 60px 20px;
+    }
+
+    .FacePhylums .title {
+        font-size: 2.5rem;
+    }
+
+    .phylum-link img {
+        height: 180px;
+    }
+
+    .search-input {
+        width: 250px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .FacePhylums .title {
+        font-size: 2rem;
+    }
+
+    .phylum-link img {
+        height: 150px;
+    }
+
+    .phylum-link p {
+        font-size: 0.85rem;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .add-btn, .edit-btn, .delete-btn {
+        margin-left: 5px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

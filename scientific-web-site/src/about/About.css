@@ -1,0 +1,217 @@
+/* ===================== */
+/* About Section */
+/* ===================== */
+
+.about {
+  background: white;
+  padding: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ===================== */
+/* Grid Layout */
+/* ===================== */
+
+.about-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+
+  justify-content: center;
+
+  gap: 20px;
+
+  list-style: none;
+  width: 100%;
+}
+
+/* ===================== */
+/* Card */
+/* ===================== */
+
+.about-card li {
+
+  background: linear-gradient(145deg,#242652,#1a1c3a);
+
+  border-radius: 20px;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  position: relative;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+
+  transition: all .35s ease;
+
+  border: solid 2px #8f94fb;
+
+}
+
+.about-card li:hover {
+
+  transform: translateY(-12px);
+
+  box-shadow:
+  0 20px 45px rgba(0,0,0,0.7),
+  0 0 25px #4e54c8;
+
+}
+
+/* ===================== */
+/* Image */
+/* ===================== */
+
+.about-image {
+
+  width: 120px;
+  height: 120px;
+
+  margin: auto;
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  padding: 4px;
+
+  background: linear-gradient(135deg,#4e54c8,#8f94fb);
+
+}
+
+.about-image img {
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+}
+
+/* ===================== */
+/* Text */
+/* ===================== */
+
+.about-text h1 {
+
+  font-size: 22px;
+
+  color: var(--main-font-color);
+
+  margin-bottom: 6px;
+
+}
+
+.about-text h3 {
+
+  font-size: 16px;
+
+  color: var(--main-titles-color);
+
+  margin-bottom: 12px;
+
+}
+
+.about-text p {
+
+  font-size: 14px;
+
+  color: #d7d7ff;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+
+}
+
+/* ===================== */
+/* Social Icons */
+/* ===================== */
+
+.about-links{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.about-links a{
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  color: var(--main-font-color);
+
+  background: linear-gradient(145deg,#2e3166,#1f214a);
+
+  box-shadow:
+  inset 0 0 5px rgba(255,255,255,0.1),
+  0 6px 12px rgba(0,0,0,0.4);
+
+  transition: all .35s ease;
+
+}
+
+/* WhatsApp */
+
+.about-links a:nth-child(1):hover{
+
+  background: #25D366;
+
+  transform: translateY(-5px) scale(1.1);
+
+  box-shadow:
+  0 0 15px #25D366,
+  0 0 25px #25D366;
+
+}
+
+/* LinkedIn */
+
+.about-links a:nth-child(2):hover{
+
+  background: #0077B5;
+
+  transform: translateY(-5px) scale(1.1);
+
+  box-shadow:
+  0 0 15px #0077B5,
+  0 0 25px #0077B5;
+
+}
+
+/* ===================== */
+/* Responsive */
+/* ===================== */
+
+@media (max-width:768px){
+
+  .about{
+
+    padding: 80px 0;
+
+  }
+
+}

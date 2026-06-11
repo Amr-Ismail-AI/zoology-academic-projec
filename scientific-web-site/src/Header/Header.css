@@ -1,0 +1,97 @@
+header {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  width: 100%;
+  max-height: 80px;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ظل خفيف */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+header .container .logo a {
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .container .nav-list {
+  display: flex;
+  gap: 20px; /* مسافة بين العناصر */
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header .container .nav-list li a{
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--main-font-color);
+  display: inline-block;
+}
+
+header .container .nav-list li a:hover {
+  transform: scale(1.05);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.1); /* تأثير خلفية خفيف */
+}
+
+/* ===== Mobile Responsive ===== */
+@media screen and (max-width: 768px) {
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  header .container .nav-list {
+    width: 100%;
+    gap: 10px;
+    margin: 10px auto;
+  }
+
+  header .container .nav-list li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  header .container .logo a {
+    font-size: 28px;
+  }
+}
+
+/* ===== Extra Small Screens ===== */
+@media screen and (max-width: 480px) {
+  header .container .logo a {
+    font-size: 24px;
+  }
+
+  header .container .nav-list li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}

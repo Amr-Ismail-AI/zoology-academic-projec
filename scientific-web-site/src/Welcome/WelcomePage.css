@@ -1,0 +1,174 @@
+.welcome-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    color: var(--main-font-color);
+
+    background-image: url(../assets/welcome-background/geralt-bacteria-106583_1920.jpg);
+    background-position: center;
+    background-size: cover;        /* أهم سطر */
+    background-repeat: no-repeat;
+}
+@media (max-width: 776px) {
+    .welcome-container {
+        flex-direction: column;
+    }
+}
+.welcome-left,
+.welcome-right {
+    flex: 1;
+}
+
+/* Left Side */
+
+.welcome-left {
+    height: 100vh;
+    align-content: center;
+    align-items: center;
+}
+.welcome-left .welcome-text {
+    width: 80%;
+    margin: 10px auto;
+    padding: 25px;
+    text-align: center;
+}
+.welcome-left .welcome-text h1::before {
+    content: "";
+    display: block;        
+    width: 75%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 12px auto;      
+}
+.welcome-left .welcome-text h1 {
+    margin-bottom: 20px;
+}
+.welcome-left .welcome-text h1::after {
+    content: "";
+    display: block;        
+    width: 70%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 12px auto;      
+}
+.welcome-left .welcome-text p {
+    padding: 15px;
+    color: #dadada;
+}
+.welcome-container .welcome-left h2 {
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+/* Right Side */
+
+.welcome-right .welcome-btn-container {
+    display: flex;              
+    justify-content: center;    
+    align-items: start;        
+    margin: 10px 0 20px 0;
+    gap: 30px;                  
+}
+
+/* تنسيق الأزرار */
+.welcome-right .welcome-btn-container .welcome-btn {
+    padding: 10px 25px;        
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2434a9;  
+    color: #fff;
+    transition: 0.3s;
+}
+.welcome-right .welcome-btn-container .welcome-btn:hover {
+    background-color: #0d1235;
+}
+.welcome-right .welcome-btn-container .welcome-btn .active {
+    background-color: greenyellow;
+}
+
+/* Login */
+.welcome-right .login-container {
+    width: 70%;
+    padding: 10px;
+    margin: 15px auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: hsla(239, 38%, 29%, 0.506);
+}
+.login-title {
+    text-align: center;
+    letter-spacing: 7px;
+}
+.form-container .form-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 15px auto;
+    padding: 15px;
+}
+.form-container .form-auth label {
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.form-container .form-auth input {
+    padding: 12px 40px;
+    border: 2px solid #2434a9;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);   /* شفافية لطيفة */
+    backdrop-filter: blur(8px);             /* تأثير الزجاج */
+    transition: 0.3s;
+}
+.form-container .form-auth .submit {
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.form-container .form-auth .submit:hover {
+    background-color: #2434a9;   
+}
+.form-container .form-auth input::placeholder {
+    color: #e0e0e0;
+}
+
+.form-container .form-auth input:focus {
+    outline: none;
+    border-color: #0d1235;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(36, 52, 169, 0.5);
+}
+.welcome-right .login-container .google-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;       /* مسافة بين الأيقونة والنص */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: 5px auto;
+}
+
+.welcome-right .login-container .google-btn:hover {
+    background-color: #2434a9;
+}
+
+.welcome-right .login-container .google-icon {
+    width: 20px;
+    height: 20px;
+}

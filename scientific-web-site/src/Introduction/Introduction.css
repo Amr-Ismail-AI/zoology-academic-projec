@@ -1,0 +1,224 @@
+.introduction {
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 75px;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.introduction .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.introduction .container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #4e54c8; /* Gradient or primary color can be applied */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduction .title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  color: #4e54c8; /* Gradient or primary color can be applied */
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduction h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.introduction h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.introduction p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+}
+
+/* ===== Intro Image Styling ===== */
+.intro-image {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+  position: relative;
+}
+
+.intro-image::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(78,84,200,0.35), transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+  animation: glowMove 6s ease-in-out infinite alternate;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.15),
+    0 0 30px rgba(78,84,200,0.3);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.2),
+    0 0 40px rgba(38, 49, 255, 0.5);
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    transform: translateY(10px) scale(1.1);
+  }
+}
+
+/* ===== Aspects Section Styling ===== */
+.intro-aspects {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.intro-aspects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+.intro-aspects li {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.intro-aspects li:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.2),
+    0 0 40px rgba(38, 49, 255, 0.5);
+}
+
+.intro-aspects li h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #4e54c8;
+}
+
+.intro-aspects li h3 {
+  color: #4e54c8;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* ===== Responsive for tablets ===== */
+@media screen and (max-width: 1024px) {
+  .introduction .title {
+    font-size: 40px;
+  }
+
+  .introduction h2 {
+    font-size: 24px;
+  }
+
+  .introduction p {
+    font-size: 17px;
+  }
+
+  .intro-aspects ul {
+    gap: 20px;
+  }
+}
+
+/* ===== Responsive for mobile ===== */
+@media screen and (max-width: 768px) {
+  .introduction {
+    padding: 60px 15px;
+  }
+
+  .introduction .title {
+    font-size: 34px;
+  }
+
+  .introduction h2 {
+    font-size: 22px;
+  }
+
+  .introduction p {
+    font-size: 16px;
+  }
+
+  .intro-aspects ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== Extra small screens ===== */
+@media screen and (max-width: 480px) {
+  .introduction {
+    padding: 40px 10px;
+  }
+
+  .introduction .title {
+    font-size: 28px;
+  }
+
+  .introduction h2 {
+    font-size: 20px;
+  }
+
+  .introduction p {
+    font-size: 15px;
+  }
+
+  .intro-aspects li {
+    padding: 20px 15px;
+  }
+}
